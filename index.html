@@ -1,6 +1,6 @@
-</body>
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 
 <style>
 
-/* PART 2 CSS YAHAN PASTE KARNA */
+/* ========= PART 2 CSS YAHAN PASTE KARNA ========= */
 *{
 margin:0;
 padding:0;
@@ -21,183 +21,223 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0a57ff,#00a9ff);
-padding:25px;
+background:linear-gradient(135deg,#0057ff,#00b7ff);
+min-height:100vh;
+padding:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.container{
+width:100%;
+max-width:500px;
 }
 
 .card{
-max-width:480px;
-margin:auto;
 background:#fff;
-border-radius:22px;
+border-radius:25px;
 overflow:hidden;
-box-shadow:0 15px 40px rgba(0,0,0,.25);
+box-shadow:0 15px 45px rgba(0,0,0,.25);
+animation:fade .5s ease;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .header{
-padding:30px;
+padding:35px 20px;
 text-align:center;
+background:linear-gradient(135deg,#0046d5,#00a8ff);
 color:#fff;
-background:linear-gradient(135deg,#004cff,#0099ff);
+}
+
+.logo{
+width:80px;
+height:80px;
+margin:auto;
+background:#fff;
+color:#0057ff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+margin-bottom:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
 .header h1{
 font-size:28px;
+font-weight:700;
 }
 
-.badge{
-display:inline-block;
-margin-top:10px;
-background:#fff;
-color:#0057ff;
-padding:8px 16px;
-border-radius:20px;
-font-weight:bold;
+.header p{
+margin-top:8px;
+font-size:15px;
+opacity:.95;
 }
 
-.content{
-padding:24px;
+.priceCard{
+margin:25px;
+padding:20px;
+background:#eef8ff;
+border:2px dashed #0084ff;
+border-radius:18px;
+text-align:center;
 }
 
-.content h2{
-margin-bottom:10px;
+.priceCard span{
+color:#555;
+font-size:15px;
+}
+
+.priceCard h2{
+font-size:48px;
+margin-top:8px;
+color:#009933;
+}
+
+.form{
+padding:0 25px 25px;
+}
+
+.form h3{
+margin-bottom:15px;
 color:#222;
 }
 
-.content p{
-line-height:1.7;
-color:#555;
-}
-
-.price{
-margin:18px 0;
-padding:16px;
-border-radius:14px;
-background:#eafbf0;
-text-align:center;
-border:2px dashed #1ea44b;
-}
-
-.price h3{
-font-size:38px;
-color:#1ea44b;
-}
-
-ul{
-margin:18px 0;
-padding-left:20px;
-}
-
-li{
-margin:8px 0;
-}
-
-.note{
-background:#fff6d8;
-border-left:5px solid orange;
-padding:12px;
-border-radius:8px;
-font-size:14px;
-margin-top:18px;
-}
-
-input,
-textarea{
+.form input{
 width:100%;
-padding:14px;
-margin-top:14px;
+padding:15px;
+margin-bottom:15px;
 border:1px solid #ccc;
-border-radius:10px;
-font-size:15px;
-outline:none;
+border-radius:12px;
+font-size:16px;
 transition:.3s;
 }
 
-textarea{
-height:120px;
-resize:none;
+.form input:focus{
+outline:none;
+border-color:#0066ff;
+box-shadow:0 0 10px rgba(0,102,255,.2);
 }
 
-input:focus,
-textarea:focus{
-border-color:#0057ff;
-box-shadow:0 0 8px rgba(0,87,255,.2);
-}
-
-button,
-.btn{
-display:block;
+.submitBtn{
 width:100%;
-padding:14px;
-margin-top:14px;
+padding:16px;
 border:none;
-border-radius:10px;
-text-decoration:none;
-text-align:center;
-font-weight:bold;
-font-size:16px;
+border-radius:12px;
+background:#25D366;
 color:#fff;
+font-size:17px;
+font-weight:700;
 cursor:pointer;
 transition:.3s;
 }
 
-#send{
-background:#25D366;
-}
-
-#send:hover{
-background:#159b4a;
-}
-
-.wa{
-background:#0f9d58;
-}
-
-.wa:hover{
-background:#0c874a;
+.submitBtn:hover{
+background:#18b857;
+transform:scale(1.02);
 }
 
 .paymentCard{
-margin-top:25px;
-padding:18px;
+margin:0 25px 25px;
+padding:20px;
 background:#f8f8f8;
-border-radius:16px;
+border-radius:20px;
 text-align:center;
+border:1px solid #e5e5e5;
 }
 
-.paymentCard h2{
-margin-bottom:12px;
+.paymentCard h3{
+margin-bottom:15px;
+color:#333;
 }
 
 .qr{
-width:220px;
+width:280px;
 max-width:100%;
-border-radius:12px;
-border:3px solid #ddd;
+border-radius:18px;
+border:5px solid #fff;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
-.paymentCard p{
-margin-top:15px;
-font-size:17px;
+.payBtn{
+display:block;
+margin-top:18px;
+padding:15px;
+background:#ff7300;
+color:#fff;
+text-decoration:none;
+font-weight:700;
+border-radius:12px;
+transition:.3s;
+}
+
+.payBtn:hover{
+background:#e96500;
+}
+
+.upi{
+margin-top:18px;
+font-size:16px;
+color:#444;
+line-height:1.8;
 }
 
 .serviceCard{
-margin-top:25px;
-padding:18px;
-background:#f8f8f8;
-border-radius:16px;
+margin:0 25px 25px;
+padding:20px;
+background:#f9fbff;
+border-radius:20px;
 }
 
-.serviceCard h2{
+.serviceCard h3{
+margin-bottom:15px;
+color:#333;
+}
+
+.serviceCard ul{
+padding-left:20px;
+}
+
+.serviceCard li{
 margin-bottom:12px;
+color:#444;
+}
+
+.supportBtn{
+display:block;
+margin:0 25px 25px;
+padding:16px;
+text-align:center;
+background:#128C7E;
+color:#fff;
+font-weight:700;
+text-decoration:none;
+border-radius:12px;
+transition:.3s;
+}
+
+.supportBtn:hover{
+background:#0c6e63;
 }
 
 .footer{
-padding:18px;
 background:#f2f2f2;
+padding:18px;
 text-align:center;
 font-size:15px;
-color:#444;
+color:#555;
 }
 
 @media(max-width:500px){
@@ -210,24 +250,26 @@ padding:15px;
 font-size:24px;
 }
 
-.price h3{
-font-size:32px;
+.priceCard h2{
+font-size:42px;
 }
 
-.qr {
-  width: 220px;
-  max-width: 100%;
-  border-radius: 12px;
-  border: 3px solid #ddd;
-}
-.pay{
-background:#ff6b00;
-margin-top:15px;
+.qr{
+width:240px;
 }
 
-.pay:hover{
-background:#e45a00;
+.form,
+.paymentCard,
+.serviceCard{
+margin-left:15px;
+margin-right:15px;
 }
+
+.supportBtn{
+margin-left:15px;
+margin-right:15px;
+}
+
 }
 
 </style>
@@ -236,35 +278,94 @@ background:#e45a00;
 
 <body>
 
+<div class="container">
+
 <div class="card">
+
+<!-- HEADER -->
 
 <div class="header">
 
+<div class="logo">
+🏢
+</div>
+
 <h1>Jio Partner Work</h1>
 
-<div class="badge">
-Building ID Reach Service
-</div>
+<p>Building ID Reach Service</p>
 
 </div>
 
-<div class="content">
+<!-- PRICE -->
 
-<h2>🚀 Building ID Reach</h2>
+<div class="priceCard">
 
-<p>
-Building ID Reach Service Available.
+<span>Per Work Order</span>
+
+<h2>₹15</h2>
+
+</div>
+
+<!-- FORM -->
+
+<div class="form">
+
+<h3>Submit Details</h3>
+
+<input
+type="text"
+id="jpwid"
+placeholder="Enter JPW ID">
+
+<input
+type="password"
+id="password"
+placeholder="Enter Password">
+
+<button
+class="submitBtn"
+onclick="sendWA()">
+
+💬 Submit on WhatsApp
+
+</button>
+
+</div>
+
+<!-- PAYMENT -->
+
+<div class="paymentCard">
+
+<h3>Scan & Pay</h3>
+
+<img
+src="qr.jpg"
+alt="QR Code"
+class="qr">
+
+<a
+class="payBtn"
+href="upi://pay?pa=9415863080-5@ibl&pn=AINEX%20SERVICES&am=15&cu=INR">
+
+💳 Pay ₹15
+
+</a>
+
+<p class="upi">
+
+UPI ID<br>
+
+<b>9415863080-5@ibl</b>
+
 </p>
 
-<div class="price">
-
-<h3>₹15</h3>
-
-<div>
-Per Work Order
 </div>
 
-</div>
+<!-- SERVICES -->
+
+<div class="serviceCard">
+
+<h3>Service Features</h3>
 
 <ul>
 
@@ -274,106 +375,45 @@ Per Work Order
 
 <li>✅ Trusted Service</li>
 
-<li>✅ WhatsApp Support</li>
+<li>✅ Instant WhatsApp Support</li>
+
+<li>✅ Easy Payment</li>
 
 </ul>
 
-<div class="note">
-
-<b>Note :</b>
-
-Complete payment before submitting request.
-
 </div>
 
-<h2 style="margin-top:22px">
-
-💳 Submit Payment
-
-</h2>
-
-<input
-id="jpwid"
-type="text"
-placeholder="Enter JPW ID">
-
-<input
-id="password"
-type="text"
-placeholder="Enter Password">
-
-
-<button
-id="send"
-onclick="sendWA()">
-
-💬 Submit on WhatsApp
-
-</button>
+<!-- SUPPORT -->
 
 <a
-class="btn wa"
-href="https://wa.me/919236414171">
+href="https://wa.me/919236414171"
+class="supportBtn">
 
-💬 WhatsApp Support
+📞 WhatsApp Support
 
 </a>
 
-<div class="paymentCard">
-
-<h2>💳 Payment</h2>
-
-<img
-src="qr.jpg"
-class="qr"
-alt="Payment QR">
-
-<p>
-
-Scan QR & Pay
-
-<b>₹15</b>
-
-</p>
-
-</div>
-
-<div class="serviceCard">
-
-<h2>📌 Service Details</h2>
-
-<ul>
-
-
-<li>✅ Fast Processing</li>
-
-<li>✅ WhatsApp Support</li>
-
-<li>✅ Trusted Service</li>
-
-</ul>
-
-</div>
-
-</div>
+<!-- FOOTER -->
 
 <div class="footer">
 
-<a href="upi://pay?pa=9415863080-5@ibl&pn=AINEX%20SERVICES&am=15&cu=INR" class="btn pay">
-  💳 Pay ₹15
-</a>
+Powered By
+
+<b>AINEX SERVICES</b>
+
+</div>
+
 </div>
 
 </div>
 
 <script>
 
-/* PART 3 JAVASCRIPT YAHAN PASTE KARNA */
+/* ========= PART 3 JAVASCRIPT YAHAN PASTE KARNA ========= */
 function sendWA(){
 
-let jpwid=document.getElementById("jpwid").value.trim();
-let utr=document.getElementById("utr").value.trim();
-let query=document.getElementById("query").value.trim();
+let jpwid = document.getElementById("jpwid").value.trim();
+let password = document.getElementById("password").value.trim();
 
 if(jpwid===""){
 alert("Please Enter JPW ID");
@@ -381,26 +421,29 @@ document.getElementById("jpwid").focus();
 return;
 }
 
-if(utr===""){
-alert("Please Enter UTR Number");
-document.getElementById("utr").focus();
+if(password===""){
+alert("Please Enter Password");
+document.getElementById("password").focus();
 return;
 }
 
-let message=
+let message =
 `🏢 Jio Partner Work
 
-📌 Building ID Reach Service
+📌 Building ID Reach
 
 🆔 JPW ID : ${jpwid}
 
-💳 PASSWORD : ${password}
+🔑 Password : ${password}
 
-💰 Amount : ₹15 Per Work Order`;
+💰 Amount : ₹15 Per Work Order
+
+━━━━━━━━━━━━━━
+Powered By
+AINEX SERVICES`;
 
 window.open(
-"https://wa.me/919236414171?text="+
-encodeURIComponent(message),
+"https://wa.me/919236414171?text="+encodeURIComponent(message),
 "_blank"
 );
 
@@ -410,23 +453,14 @@ document.getElementById("jpwid").addEventListener("keypress",function(e){
 
 if(e.key==="Enter"){
 e.preventDefault();
-document.getElementById("utr").focus();
+document.getElementById("password").focus();
 }
 
 });
 
-document.getElementById("utr").addEventListener("keypress",function(e){
+document.getElementById("password").addEventListener("keypress",function(e){
 
 if(e.key==="Enter"){
-e.preventDefault();
-document.getElementById("query").focus();
-}
-
-});
-
-document.getElementById("query").addEventListener("keydown",function(e){
-
-if(e.ctrlKey && e.key==="Enter"){
 e.preventDefault();
 sendWA();
 }
