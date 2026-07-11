@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>Jio Partner Work | AINEX SERVICES</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-/* ======== PART 2 CSS HERE ======== */
+/* ======================
+PART 2 CSS HERE
+====================== */
 *{
 margin:0;
 padding:0;
@@ -22,12 +25,12 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0048ff,#00b4ff);
+background:linear-gradient(135deg,#0048ff,#00b8ff);
 min-height:100vh;
-padding:20px;
 display:flex;
 justify-content:center;
 align-items:center;
+padding:20px;
 }
 
 .container{
@@ -37,17 +40,17 @@ max-width:520px;
 
 .card{
 background:#fff;
-border-radius:28px;
+border-radius:30px;
 overflow:hidden;
 box-shadow:0 20px 60px rgba(0,0,0,.25);
-animation:show .5s ease;
+animation:fade .5s ease;
 }
 
-@keyframes show{
+@keyframes fade{
 
 from{
 opacity:0;
-transform:translateY(30px);
+transform:translateY(25px);
 }
 
 to{
@@ -58,25 +61,23 @@ transform:translateY(0);
 }
 
 .header{
-padding:35px 20px;
-text-align:center;
 background:linear-gradient(135deg,#0052D4,#00A2FF);
+padding:35px 25px;
+text-align:center;
 color:#fff;
-position:relative;
 }
 
 .logo{
 width:90px;
 height:90px;
 margin:auto;
-background:#fff;
-color:#0052D4;
+margin-bottom:15px;
 border-radius:50%;
+background:#fff;
 display:flex;
 align-items:center;
 justify-content:center;
 font-size:42px;
-margin-bottom:15px;
 box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
@@ -94,9 +95,8 @@ opacity:.95;
 .provider{
 margin-top:18px;
 padding:12px;
-background:rgba(255,255,255,.15);
 border-radius:12px;
-font-size:15px;
+background:rgba(255,255,255,.15);
 }
 
 .provider b{
@@ -108,68 +108,71 @@ font-size:18px;
 .priceCard{
 margin:20px;
 padding:18px;
-background:#eef7ff;
-border:2px dashed #0084ff;
 border-radius:18px;
+background:#eef7ff;
+border:2px dashed #0080ff;
 text-align:center;
 }
 
 .priceCard span{
 font-size:15px;
-color:#666;
+color:#555;
 }
 
 .priceCard h2{
-margin-top:8px;
 font-size:50px;
+margin-top:8px;
 color:#16a34a;
 }
 
 .paymentCard{
 margin:20px;
-padding:20px;
+padding:22px;
+border-radius:22px;
 background:#fafafa;
-border-radius:20px;
 text-align:center;
-border:1px solid #eee;
 }
 
 .paymentCard h2{
-margin-bottom:18px;
 font-size:24px;
-color:#222;
+margin-bottom:8px;
+}
+
+.subtitle{
+color:#666;
+margin-bottom:18px;
 }
 
 .qr{
 width:300px;
 max-width:100%;
-border-radius:18px;
+border-radius:20px;
 border:5px solid #fff;
-box-shadow:0 10px 25px rgba(0,0,0,.18);
+box-shadow:0 12px 30px rgba(0,0,0,.18);
 }
 
 .payBtn{
 display:block;
 margin-top:20px;
-padding:16px;
-border-radius:14px;
+padding:17px;
 background:#ff7300;
 color:#fff;
 text-decoration:none;
 font-size:18px;
 font-weight:700;
+border-radius:14px;
 transition:.3s;
 }
 
 .payBtn:hover{
-background:#e05f00;
+background:#e46000;
 transform:scale(1.02);
 }
 
-.paymentNote{
+.notice{
 margin-top:18px;
 padding:12px;
-background:#fff5d9;
+background:#fff7df;
 border-left:5px solid orange;
 border-radius:10px;
 font-size:14px;
@@ -183,14 +186,13 @@ padding:0 20px 20px;
 
 .formCard h2{
 margin-bottom:15px;
-color:#222;
 }
 
 .formCard input{
 width:100%;
 padding:15px;
 margin-bottom:15px;
-border:1px solid #ccc;
+border:1px solid #d8d8d8;
 border-radius:12px;
 font-size:16px;
 transition:.3s;
@@ -199,7 +201,7 @@ transition:.3s;
 .formCard input:focus{
 outline:none;
 border-color:#0052D4;
-box-shadow:0 0 10px rgba(0,82,212,.20);
+box-shadow:0 0 10px rgba(0,82,212,.25);
 }
 
 .check{
@@ -230,32 +232,46 @@ transition:.3s;
 }
 
 #submitBtn:hover{
-background:#18b957;
+background:#18b857;
 transform:scale(1.02);
 }
 
 #submitBtn:disabled{
-background:#888;
+background:#999;
 cursor:not-allowed;
 }
 
 .featureCard{
 margin:20px;
 padding:20px;
-background:#f7fbff;
+background:#f8fbff;
 border-radius:20px;
 }
 
 .featureCard h2{
-margin-bottom:15px;
+margin-bottom:20px;
+text-align:center;
 }
 
-.featureCard ul{
-padding-left:20px;
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
 }
 
-.featureCard li{
-margin-bottom:12px;
+.box{
+background:#fff;
+padding:18px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+font-size:28px;
+}
+
+.box p{
+margin-top:10px;
+font-size:14px;
+font-weight:600;
 color:#444;
 }
 
@@ -263,10 +279,10 @@ color:#444;
 display:block;
 margin:20px;
 padding:16px;
-text-align:center;
-text-decoration:none;
 background:#128C7E;
 color:#fff;
+text-align:center;
+text-decoration:none;
 font-weight:700;
 font-size:17px;
 border-radius:14px;
@@ -278,20 +294,20 @@ background:#0d6d62;
 }
 
 .footer{
-padding:22px;
+padding:25px;
 text-align:center;
-background:#f4f4f4;
-color:#555;
+background:#f3f3f3;
 }
 
 .footer h3{
-font-size:22px;
 color:#0052D4;
+font-size:22px;
 margin-bottom:8px;
 }
 
 .footer p{
 margin-top:6px;
+color:#666;
 font-size:14px;
 }
 
@@ -302,7 +318,7 @@ padding:12px;
 }
 
 .header h1{
-font-size:25px;
+font-size:24px;
 }
 
 .priceCard h2{
@@ -310,7 +326,11 @@ font-size:42px;
 }
 
 .qr{
-width:250px;
+width:240px;
+}
+
+.grid{
+grid-template-columns:1fr 1fr;
 }
 
 }
@@ -330,7 +350,9 @@ width:250px;
 <div class="header">
 
 <div class="logo">
+
 🏢
+
 </div>
 
 <h1>Jio Partner Work</h1>
@@ -339,7 +361,7 @@ width:250px;
 
 <div class="provider">
 
-Service Provider
+Provided By
 
 <b>AINEX SERVICES</b>
 
@@ -363,22 +385,29 @@ Service Provider
 
 <h2>💳 Complete Payment</h2>
 
+<p class="subtitle">
+
+Scan QR Code or Click Pay Button
+
+</p>
+
 <img
 src="qr.jpg"
 class="qr"
 alt="QR Code">
 
 <a
+href="upi://pay?pa=9415863080-5@ibl&pn=AINEX%20SERVICES&am=15&cu=INR"
 class="payBtn"
-href="upi://pay?pa=9415863080-5@ibl&pn=AINEX%20SERVICES&am=15&cu=INR">
+target="_blank">
 
 💳 Pay ₹15
 
 </a>
 
-<div class="paymentNote">
+<div class="notice">
 
-Complete your payment first and then submit your details.
+⚠️ Complete payment first then submit your details.
 
 </div>
 
@@ -393,18 +422,17 @@ Complete your payment first and then submit your details.
 <input
 type="number"
 id="jpwid"
-inputmode="numeric"
-placeholder="Enter JPW ID">
+placeholder="JPW ID (Numbers Only)">
 
 <input
 type="password"
 id="password"
-placeholder="Enter Password">
+placeholder="Password">
 
 <input
 type="text"
 id="utr"
-placeholder="Enter UTR Number">
+placeholder="UTR Number">
 
 <label class="check">
 
@@ -420,7 +448,7 @@ I Have Completed Payment
 id="submitBtn"
 onclick="sendWA()">
 
-📤 Submit On WhatsApp
+📤 Submit on WhatsApp
 
 </button>
 
@@ -430,25 +458,47 @@ onclick="sendWA()">
 
 <div class="featureCard">
 
-<h2>Why Choose Us?</h2>
+<h2>Why Choose AINEX SERVICES?</h2>
 
-<ul>
+<div class="grid">
 
-<li>✅ Trusted Service</li>
+<div class="box">
 
-<li>✅ Fast Processing</li>
+⚡
 
-<li>✅ Secure Payment</li>
-
-<li>✅ Professional Support</li>
-
-<li>✅ Easy Process</li>
-
-</ul>
+<p>Fast Work</p>
 
 </div>
 
-<!-- WHATSAPP -->
+<div class="box">
+
+🛡️
+
+<p>Secure</p>
+
+</div>
+
+<div class="box">
+
+💬
+
+<p>Support</p>
+
+</div>
+
+<div class="box">
+
+✅
+
+<p>Trusted</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- SUPPORT -->
 
 <a
 href="https://wa.me/919236414171"
@@ -464,17 +514,9 @@ class="supportBtn">
 
 <h3>AINEX SERVICES</h3>
 
-<p>
+<p>Building ID Reach Service Provider</p>
 
-Building ID Reach Service Provider
-
-</p>
-
-<p>
-
-© 2026 All Rights Reserved
-
-</p>
+<p>© 2026 All Rights Reserved</p>
 
 </div>
 
@@ -484,65 +526,68 @@ Building ID Reach Service Provider
 
 <script>
 
-/* ======== PART 3 JAVASCRIPT HERE ======== */function sendWA(){
-
-const btn=document.getElementById("submitBtn");
-
-let jpwid=document.getElementById("jpwid").value.trim();
-let password=document.getElementById("password").value.trim();
-let utr=document.getElementById("utr").value.trim();
-let paid=document.getElementById("paid").checked();
-
-if(jpwid==""){
-alert("Please Enter JPW ID");
-document.getElementById("jpwid").focus();
-return;
-}
-
-if(!/^[0-9]+$/.test(jpwid)){
-alert("JPW ID must contain numbers only.");
-document.getElementById("jpwid").focus();
-return;
-}
-
-if(password==""){
-alert("Please Enter Password");
-document.getElementById("password").focus();
-return;
-}
-
-if(utr==""){
-alert("Please Enter UTR Number");
-document.getElementById("utr").focus();
-return;
-}
-
-if(utr.length<12){
-alert("Please Enter Valid UTR Number");
-document.getElementById("utr").focus();
-return;
-}
-
-if(!paid){
-alert("Please Complete Payment First");
-return;
-}
-
-btn.disabled=true;
-btn.innerHTML="⏳ Opening WhatsApp...";
-
-let now=new Date();
-
-let date=now.toLocaleDateString("en-IN");
-
-let time=now.toLocaleTimeString("en-IN",{
-hour:"2-digit",
-minute:"2-digit"
-});
-
-let message=
-
-`*JPW* #${jpwid}
+/* ======================
+PART 3 JAVASCRIPT HERE
+====================== */
+function sendWA() {
+  
+  const btn = document.getElementById("submitBtn");
+  
+  let jpwid = document.getElementById("jpwid").value.trim();
+  let password = document.getElementById("password").value.trim();
+  let utr = document.getElementById("utr").value.trim();
+  let paid = document.getElementById("paid").checked;
+  
+  if (jpwid == "") {
+    alert("Please Enter JPW ID");
+    document.getElementById("jpwid").focus();
+    return;
+  }
+  
+  if (!/^[0-9]+$/.test(jpwid)) {
+    alert("JPW ID must contain numbers only.");
+    document.getElementById("jpwid").focus();
+    return;
+  }
+  
+  if (password == "") {
+    alert("Please Enter Password");
+    document.getElementById("password").focus();
+    return;
+  }
+  
+  if (utr == "") {
+    alert("Please Enter UTR Number");
+    document.getElementById("utr").focus();
+    return;
+  }
+  
+  if (!/^[A-Za-z0-9]{12,22}$/.test(utr)) {
+    alert("Please Enter Valid UTR Number");
+    document.getElementById("utr").focus();
+    return;
+  }
+  
+  if (!paid) {
+    alert("Please Complete Payment First");
+    return;
+  }
+  
+  btn.disabled = true;
+  btn.innerHTML = "⏳ Opening WhatsApp...";
+  
+  let now = new Date();
+  
+  let date = now.toLocaleDateString("en-IN");
+  
+  let time = now.toLocaleTimeString("en-IN", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true
+  });
+  
+  let message =
+    `*JPW* #${jpwid}
 
 *Pass* #${password}
 
@@ -553,63 +598,59 @@ let message=
 *Date* #${date}
 
 *Time* #${time}`;
-
-window.open(
-
-"https://wa.me/919236414171?text="+encodeURIComponent(message),
-
-"_blank"
-
-);
-
-setTimeout(function(){
-
-btn.disabled=false;
-
-btn.innerHTML="📤 Submit On WhatsApp";
-
-},2000);
-
+  
+  let url = "https://wa.me/919236414171?text=" + encodeURIComponent(message);
+  
+  window.open(url, "_blank");
+  
+  setTimeout(function() {
+    
+    btn.disabled = false;
+    btn.innerHTML = "📤 Submit on WhatsApp";
+    
+  }, 2000);
+  
 }
 
-document.getElementById("jpwid").addEventListener("keydown",function(e){
+/* ENTER KEY SUPPORT */
 
-if(e.key==="Enter"){
-
-e.preventDefault();
-
-document.getElementById("password").focus();
-
-}
-
+document.getElementById("jpwid").addEventListener("keydown", function(e) {
+  
+  if (e.key === "Enter") {
+    
+    e.preventDefault();
+    
+    document.getElementById("password").focus();
+    
+  }
+  
 });
 
-document.getElementById("password").addEventListener("keydown",function(e){
-
-if(e.key==="Enter"){
-
-e.preventDefault();
-
-document.getElementById("utr").focus();
-
-}
-
+document.getElementById("password").addEventListener("keydown", function(e) {
+  
+  if (e.key === "Enter") {
+    
+    e.preventDefault();
+    
+    document.getElementById("utr").focus();
+    
+  }
+  
 });
 
-document.getElementById("utr").addEventListener("keydown",function(e){
-
-if(e.key==="Enter"){
-
-e.preventDefault();
-
-sendWA();
-
-}
-
+document.getElementById("utr").addEventListener("keydown", function(e) {
+  
+  if (e.key === "Enter") {
+    
+    e.preventDefault();
+    
+    sendWA();
+    
+  }
+  
 });
 
 </script>
 
 </body>
-
 </html>
