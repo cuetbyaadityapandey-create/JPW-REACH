@@ -4,15 +4,16 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jio Partner Work | Building ID Reach</title>
+<title>Jio Partner Work | AINEX SERVICES</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ========= PART 2 CSS YAHAN PASTE KARNA ========= */
+/* ======== PART 2 CSS HERE ======== */
 *{
 margin:0;
 padding:0;
@@ -21,7 +22,7 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0057ff,#00b7ff);
+background:linear-gradient(135deg,#0048ff,#00b4ff);
 min-height:100vh;
 padding:20px;
 display:flex;
@@ -31,52 +32,56 @@ align-items:center;
 
 .container{
 width:100%;
-max-width:500px;
+max-width:520px;
 }
 
 .card{
 background:#fff;
-border-radius:25px;
+border-radius:28px;
 overflow:hidden;
-box-shadow:0 15px 45px rgba(0,0,0,.25);
-animation:fade .5s ease;
+box-shadow:0 20px 60px rgba(0,0,0,.25);
+animation:show .5s ease;
 }
 
-@keyframes fade{
+@keyframes show{
+
 from{
 opacity:0;
-transform:translateY(20px);
+transform:translateY(30px);
 }
+
 to{
 opacity:1;
 transform:translateY(0);
 }
+
 }
 
 .header{
 padding:35px 20px;
 text-align:center;
-background:linear-gradient(135deg,#0046d5,#00a8ff);
+background:linear-gradient(135deg,#0052D4,#00A2FF);
 color:#fff;
+position:relative;
 }
 
 .logo{
-width:80px;
-height:80px;
+width:90px;
+height:90px;
 margin:auto;
 background:#fff;
-color:#0057ff;
+color:#0052D4;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:40px;
+font-size:42px;
 margin-bottom:15px;
-box-shadow:0 10px 25px rgba(0,0,0,.2);
+box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
 .header h1{
-font-size:28px;
+font-size:30px;
 font-weight:700;
 }
 
@@ -86,36 +91,102 @@ font-size:15px;
 opacity:.95;
 }
 
+.provider{
+margin-top:18px;
+padding:12px;
+background:rgba(255,255,255,.15);
+border-radius:12px;
+font-size:15px;
+}
+
+.provider b{
+display:block;
+margin-top:5px;
+font-size:18px;
+}
+
 .priceCard{
-margin:25px;
-padding:20px;
-background:#eef8ff;
+margin:20px;
+padding:18px;
+background:#eef7ff;
 border:2px dashed #0084ff;
 border-radius:18px;
 text-align:center;
 }
 
 .priceCard span{
-color:#555;
 font-size:15px;
+color:#666;
 }
 
 .priceCard h2{
-font-size:48px;
 margin-top:8px;
-color:#009933;
+font-size:50px;
+color:#16a34a;
 }
 
-.form{
-padding:0 25px 25px;
+.paymentCard{
+margin:20px;
+padding:20px;
+background:#fafafa;
+border-radius:20px;
+text-align:center;
+border:1px solid #eee;
 }
 
-.form h3{
+.paymentCard h2{
+margin-bottom:18px;
+font-size:24px;
+color:#222;
+}
+
+.qr{
+width:300px;
+max-width:100%;
+border-radius:18px;
+border:5px solid #fff;
+box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+.payBtn{
+display:block;
+margin-top:20px;
+padding:16px;
+border-radius:14px;
+background:#ff7300;
+color:#fff;
+text-decoration:none;
+font-size:18px;
+font-weight:700;
+transition:.3s;
+}
+
+.payBtn:hover{
+background:#e05f00;
+transform:scale(1.02);
+}
+
+.paymentNote{
+margin-top:18px;
+padding:12px;
+background:#fff5d9;
+border-left:5px solid orange;
+border-radius:10px;
+font-size:14px;
+line-height:1.6;
+color:#555;
+}
+
+.formCard{
+padding:0 20px 20px;
+}
+
+.formCard h2{
 margin-bottom:15px;
 color:#222;
 }
 
-.form input{
+.formCard input{
 width:100%;
 padding:15px;
 margin-bottom:15px;
@@ -125,129 +196,113 @@ font-size:16px;
 transition:.3s;
 }
 
-.form input:focus{
+.formCard input:focus{
 outline:none;
-border-color:#0066ff;
-box-shadow:0 0 10px rgba(0,102,255,.2);
+border-color:#0052D4;
+box-shadow:0 0 10px rgba(0,82,212,.20);
 }
 
-.submitBtn{
+.check{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:20px;
+font-size:15px;
+font-weight:500;
+}
+
+.check input{
+width:18px;
+height:18px;
+}
+
+#submitBtn{
 width:100%;
-padding:16px;
+padding:17px;
 border:none;
-border-radius:12px;
+border-radius:14px;
 background:#25D366;
 color:#fff;
-font-size:17px;
+font-size:18px;
 font-weight:700;
 cursor:pointer;
 transition:.3s;
 }
 
-.submitBtn:hover{
-background:#18b857;
+#submitBtn:hover{
+background:#18b957;
 transform:scale(1.02);
 }
 
-.paymentCard{
-margin:0 25px 25px;
+#submitBtn:disabled{
+background:#888;
+cursor:not-allowed;
+}
+
+.featureCard{
+margin:20px;
 padding:20px;
-background:#f8f8f8;
-border-radius:20px;
-text-align:center;
-border:1px solid #e5e5e5;
-}
-
-.paymentCard h3{
-margin-bottom:15px;
-color:#333;
-}
-
-.qr{
-width:280px;
-max-width:100%;
-border-radius:18px;
-border:5px solid #fff;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-.payBtn{
-display:block;
-margin-top:18px;
-padding:15px;
-background:#ff7300;
-color:#fff;
-text-decoration:none;
-font-weight:700;
-border-radius:12px;
-transition:.3s;
-}
-
-.payBtn:hover{
-background:#e96500;
-}
-
-.upi{
-margin-top:18px;
-font-size:16px;
-color:#444;
-line-height:1.8;
-}
-
-.serviceCard{
-margin:0 25px 25px;
-padding:20px;
-background:#f9fbff;
+background:#f7fbff;
 border-radius:20px;
 }
 
-.serviceCard h3{
+.featureCard h2{
 margin-bottom:15px;
-color:#333;
 }
 
-.serviceCard ul{
+.featureCard ul{
 padding-left:20px;
 }
 
-.serviceCard li{
+.featureCard li{
 margin-bottom:12px;
 color:#444;
 }
 
 .supportBtn{
 display:block;
-margin:0 25px 25px;
+margin:20px;
 padding:16px;
 text-align:center;
+text-decoration:none;
 background:#128C7E;
 color:#fff;
 font-weight:700;
-text-decoration:none;
-border-radius:12px;
+font-size:17px;
+border-radius:14px;
 transition:.3s;
 }
 
 .supportBtn:hover{
-background:#0c6e63;
+background:#0d6d62;
 }
 
 .footer{
-background:#f2f2f2;
-padding:18px;
+padding:22px;
 text-align:center;
-font-size:15px;
+background:#f4f4f4;
 color:#555;
+}
+
+.footer h3{
+font-size:22px;
+color:#0052D4;
+margin-bottom:8px;
+}
+
+.footer p{
+margin-top:6px;
+font-size:14px;
 }
 
 @media(max-width:500px){
 
 body{
-padding:15px;
+padding:12px;
 }
 
 .header h1{
-font-size:24px;
+font-size:25px;
 }
 
 .priceCard h2{
@@ -255,19 +310,7 @@ font-size:42px;
 }
 
 .qr{
-width:240px;
-}
-
-.form,
-.paymentCard,
-.serviceCard{
-margin-left:15px;
-margin-right:15px;
-}
-
-.supportBtn{
-margin-left:15px;
-margin-right:15px;
+width:250px;
 }
 
 }
@@ -294,6 +337,14 @@ margin-right:15px;
 
 <p>Building ID Reach Service</p>
 
+<div class="provider">
+
+Service Provider
+
+<b>AINEX SERVICES</b>
+
+</div>
+
 </div>
 
 <!-- PRICE -->
@@ -306,42 +357,16 @@ margin-right:15px;
 
 </div>
 
-<!-- FORM -->
-
-<div class="form">
-
-<h3>Submit Details</h3>
-
-<input
-type="text"
-id="jpwid"
-placeholder="Enter JPW ID">
-
-<input
-type="password"
-id="password"
-placeholder="Enter Password">
-
-<button
-class="submitBtn"
-onclick="sendWA()">
-
-💬 Submit on WhatsApp
-
-</button>
-
-</div>
-
 <!-- PAYMENT -->
 
 <div class="paymentCard">
 
-<h3>Scan & Pay</h3>
+<h2>💳 Complete Payment</h2>
 
 <img
 src="qr.jpg"
-alt="QR Code"
-class="qr">
+class="qr"
+alt="QR Code">
 
 <a
 class="payBtn"
@@ -351,45 +376,85 @@ href="upi://pay?pa=9415863080-5@ibl&pn=AINEX%20SERVICES&am=15&cu=INR">
 
 </a>
 
-<p class="upi">
+<div class="paymentNote">
 
-UPI ID<br>
-
-<b>9415863080-5@ibl</b>
-
-</p>
+Complete your payment first and then submit your details.
 
 </div>
 
-<!-- SERVICES -->
+</div>
 
-<div class="serviceCard">
+<!-- FORM -->
 
-<h3>Service Features</h3>
+<div class="formCard">
+
+<h2>Submit Details</h2>
+
+<input
+type="number"
+id="jpwid"
+inputmode="numeric"
+placeholder="Enter JPW ID">
+
+<input
+type="password"
+id="password"
+placeholder="Enter Password">
+
+<input
+type="text"
+id="utr"
+placeholder="Enter UTR Number">
+
+<label class="check">
+
+<input
+type="checkbox"
+id="paid">
+
+I Have Completed Payment
+
+</label>
+
+<button
+id="submitBtn"
+onclick="sendWA()">
+
+📤 Submit On WhatsApp
+
+</button>
+
+</div>
+
+<!-- FEATURES -->
+
+<div class="featureCard">
+
+<h2>Why Choose Us?</h2>
 
 <ul>
 
-<li>✅ Building ID Reach</li>
+<li>✅ Trusted Service</li>
 
 <li>✅ Fast Processing</li>
 
-<li>✅ Trusted Service</li>
+<li>✅ Secure Payment</li>
 
-<li>✅ Instant WhatsApp Support</li>
+<li>✅ Professional Support</li>
 
-<li>✅ Easy Payment</li>
+<li>✅ Easy Process</li>
 
 </ul>
 
 </div>
 
-<!-- SUPPORT -->
+<!-- WHATSAPP -->
 
 <a
 href="https://wa.me/919236414171"
 class="supportBtn">
 
-📞 WhatsApp Support
+💬 WhatsApp Support
 
 </a>
 
@@ -397,9 +462,19 @@ class="supportBtn">
 
 <div class="footer">
 
-Powered By
+<h3>AINEX SERVICES</h3>
 
-<b>AINEX SERVICES</b>
+<p>
+
+Building ID Reach Service Provider
+
+</p>
+
+<p>
+
+© 2026 All Rights Reserved
+
+</p>
 
 </div>
 
@@ -409,60 +484,126 @@ Powered By
 
 <script>
 
-/* ========= PART 3 JAVASCRIPT YAHAN PASTE KARNA ========= */
-function sendWA(){
+/* ======== PART 3 JAVASCRIPT HERE ======== */function sendWA(){
 
-let jpwid = document.getElementById("jpwid").value.trim();
-let password = document.getElementById("password").value.trim();
+const btn=document.getElementById("submitBtn");
 
-if(jpwid===""){
+let jpwid=document.getElementById("jpwid").value.trim();
+let password=document.getElementById("password").value.trim();
+let utr=document.getElementById("utr").value.trim();
+let paid=document.getElementById("paid").checked();
+
+if(jpwid==""){
 alert("Please Enter JPW ID");
 document.getElementById("jpwid").focus();
 return;
 }
 
-if(password===""){
+if(!/^[0-9]+$/.test(jpwid)){
+alert("JPW ID must contain numbers only.");
+document.getElementById("jpwid").focus();
+return;
+}
+
+if(password==""){
 alert("Please Enter Password");
 document.getElementById("password").focus();
 return;
 }
 
-let message =
-`🏢 Jio Partner Work
+if(utr==""){
+alert("Please Enter UTR Number");
+document.getElementById("utr").focus();
+return;
+}
 
-📌 Building ID Reach
+if(utr.length<12){
+alert("Please Enter Valid UTR Number");
+document.getElementById("utr").focus();
+return;
+}
 
-🆔 JPW ID : ${jpwid}
+if(!paid){
+alert("Please Complete Payment First");
+return;
+}
 
-🔑 Password : ${password}
+btn.disabled=true;
+btn.innerHTML="⏳ Opening WhatsApp...";
 
-💰 Amount : ₹15 Per Work Order
+let now=new Date();
 
-━━━━━━━━━━━━━━
-Powered By
-AINEX SERVICES`;
+let date=now.toLocaleDateString("en-IN");
+
+let time=now.toLocaleTimeString("en-IN",{
+hour:"2-digit",
+minute:"2-digit"
+});
+
+let message=
+
+`*JPW* #${jpwid}
+
+*Pass* #${password}
+
+*UTR* #${utr}
+
+*Payment* #Done
+
+*Date* #${date}
+
+*Time* #${time}`;
 
 window.open(
+
 "https://wa.me/919236414171?text="+encodeURIComponent(message),
+
 "_blank"
+
 );
+
+setTimeout(function(){
+
+btn.disabled=false;
+
+btn.innerHTML="📤 Submit On WhatsApp";
+
+},2000);
 
 }
 
-document.getElementById("jpwid").addEventListener("keypress",function(e){
+document.getElementById("jpwid").addEventListener("keydown",function(e){
 
 if(e.key==="Enter"){
+
 e.preventDefault();
+
 document.getElementById("password").focus();
+
 }
 
 });
 
-document.getElementById("password").addEventListener("keypress",function(e){
+document.getElementById("password").addEventListener("keydown",function(e){
 
 if(e.key==="Enter"){
+
 e.preventDefault();
+
+document.getElementById("utr").focus();
+
+}
+
+});
+
+document.getElementById("utr").addEventListener("keydown",function(e){
+
+if(e.key==="Enter"){
+
+e.preventDefault();
+
 sendWA();
+
 }
 
 });
@@ -470,4 +611,5 @@ sendWA();
 </script>
 
 </body>
+
 </html>
