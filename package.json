@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vercel dev",
+    "build": "echo Build Complete",
     "start": "vercel dev"
   },
   "dependencies": {
