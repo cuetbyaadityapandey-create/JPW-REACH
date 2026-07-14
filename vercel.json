@@ -1,15 +1,11 @@
 {
-  "version": 2,
-
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
-    "api/create-order.js": {
-      "runtime": "@vercel/node"
-    },
-    "api/verify-payment.js": {
-      "runtime": "@vercel/node"
+    "api/*.js": {
+      "runtime": "@vercel/node@5.3.24",
+      "maxDuration": 10
     }
   },
-
   "routes": [
     {
       "src": "/api/create-order",
