@@ -1,7 +1,7 @@
 /*==================================================
-AINEX JPW PRO v3.0
+AINEX JPW PRO v4
 style.css
-PART 1
+PART 2
 ==================================================*/
 
 *{
@@ -18,62 +18,59 @@ scroll-behavior:smooth;
 
 body{
 background:#eef5ff;
-min-height:100vh;
 overflow-x:hidden;
+min-height:100vh;
 position:relative;
 color:#222;
 }
 
 /* Background */
 
-.bgCircle1{
+.bg1{
 position:fixed;
-width:380px;
-height:380px;
-background:#0058ff;
 top:-180px;
 left:-180px;
+width:400px;
+height:400px;
+background:#0058ff;
 border-radius:50%;
-filter:blur(120px);
+filter:blur(130px);
 opacity:.18;
 z-index:-2;
 }
 
-.bgCircle2{
+.bg2{
 position:fixed;
-width:380px;
-height:380px;
-background:#00b8ff;
 bottom:-180px;
 right:-180px;
+width:400px;
+height:400px;
+background:#00b8ff;
 border-radius:50%;
-filter:blur(120px);
+filter:blur(130px);
 opacity:.18;
 z-index:-2;
 }
 
-/* Wrapper */
+/* Container */
 
-.wrapper{
-width:100%;
+.container{
 max-width:470px;
 margin:auto;
-padding:16px;
+padding:15px;
 }
 
-/*==========================
-TOP SLIDER
-==========================*/
+/* Top Bar */
 
-.topSlider{
+.topBar{
 height:42px;
-border-radius:14px;
-background:linear-gradient(90deg,#0057ff,#00a8ff);
+background:linear-gradient(90deg,#0058ff,#00b7ff);
+border-radius:15px;
 overflow:hidden;
 display:flex;
 align-items:center;
 margin-bottom:18px;
-box-shadow:0 12px 25px rgba(0,0,0,.10);
+box-shadow:0 10px 25px rgba(0,0,0,.10);
 }
 
 .marquee{
@@ -83,9 +80,9 @@ animation:marquee 18s linear infinite;
 
 .marquee span{
 padding-left:100%;
-color:#fff;
 font-size:14px;
 font-weight:600;
+color:#fff;
 }
 
 @keyframes marquee{
@@ -100,9 +97,7 @@ transform:translateX(-100%);
 
 }
 
-/*==========================
-HEADER
-==========================*/
+/* Header */
 
 header{
 display:flex;
@@ -118,32 +113,32 @@ gap:12px;
 }
 
 .logo{
-width:60px;
-height:60px;
+width:58px;
+height:58px;
 border-radius:18px;
-background:linear-gradient(135deg,#0058ff,#00b8ff);
+background:linear-gradient(135deg,#0058ff,#00b7ff);
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 font-size:28px;
 color:#fff;
 box-shadow:0 18px 35px rgba(0,88,255,.25);
 }
 
 .brand h1{
-font-size:21px;
+font-size:20px;
 font-weight:700;
 color:#111;
 }
 
 .brand p{
 font-size:13px;
-margin-top:4px;
 color:#666;
+margin-top:4px;
 }
 
-.secureTag{
-padding:9px 15px;
+.liveStatus{
+padding:8px 14px;
 background:#fff;
 border-radius:50px;
 display:flex;
@@ -154,12 +149,12 @@ font-weight:600;
 box-shadow:0 10px 20px rgba(0,0,0,.08);
 }
 
-.secureTag span{
+.liveStatus span{
 width:10px;
 height:10px;
-background:#17c700;
 border-radius:50%;
-animation:blink 1s infinite;
+background:#18c400;
+animation:blink .9s infinite;
 }
 
 @keyframes blink{
@@ -170,30 +165,24 @@ opacity:.30;
 
 }
 
-/*==========================
-HERO
-==========================*/
-
-.hero{
-margin-bottom:22px;
-}
+/* Hero */
 
 .heroCard{
-background:linear-gradient(135deg,#0057ff,#00b9ff);
+background:linear-gradient(135deg,#0058ff,#00b8ff);
 border-radius:28px;
-padding:30px 22px;
+padding:28px 22px;
 text-align:center;
 color:#fff;
 box-shadow:0 20px 40px rgba(0,80,255,.25);
 }
 
-.heroIcon{
-font-size:52px;
-margin-bottom:12px;
+.rocket{
+font-size:48px;
+margin-bottom:10px;
 }
 
 .heroCard h2{
-font-size:30px;
+font-size:28px;
 font-weight:700;
 }
 
@@ -203,23 +192,23 @@ font-size:15px;
 opacity:.95;
 }
 
-.priceBox{
-margin-top:22px;
+.price{
+margin-top:20px;
 font-size:56px;
 font-weight:800;
 line-height:1;
 }
 
-.priceBox span{
+.price span{
 display:block;
+margin-top:8px;
 font-size:15px;
 font-weight:500;
-margin-top:8px;
 }
 
 #payBtn{
 width:100%;
-height:60px;
+height:58px;
 border:none;
 border-radius:18px;
 margin-top:24px;
@@ -233,18 +222,15 @@ transition:.30s;
 
 #payBtn:hover{
 transform:translateY(-3px);
-box-shadow:0 15px 30px rgba(255,255,255,.25);
 }
 
-.paymentText{
+.paymentType{
 margin-top:15px;
 font-size:13px;
 opacity:.95;
 }
 
-/*==========================
-STEP
-==========================*/
+/* Steps */
 
 .steps{
 display:flex;
@@ -264,13 +250,13 @@ gap:8px;
 width:46px;
 height:46px;
 border-radius:50%;
-background:#dbe8ff;
 display:flex;
-align-items:center;
 justify-content:center;
-font-weight:700;
+align-items:center;
+background:#dbe8ff;
 color:#0058ff;
-transition:.3s;
+font-weight:700;
+transition:.30s;
 }
 
 .step.active .circle{
@@ -281,24 +267,21 @@ color:#fff;
 .step p{
 font-size:12px;
 font-weight:600;
-color:#444;
 }
 
-.stepLine{
-width:45px;
+.line{
+width:42px;
 height:4px;
 background:#dbe8ff;
-border-radius:50px;
 margin:0 10px;
+border-radius:20px;
 }
 
-/*==========================
-STATUS
-==========================*/
+/* Status */
 
 .statusCard{
 background:#fff;
-padding:25px;
+padding:24px;
 border-radius:24px;
 text-align:center;
 box-shadow:0 12px 30px rgba(0,0,0,.08);
@@ -308,441 +291,324 @@ margin-bottom:20px;
 .statusIcon{
 width:68px;
 height:68px;
+margin:auto;
+margin-bottom:15px;
 border-radius:50%;
 background:#eef4ff;
 display:flex;
-align-items:center;
 justify-content:center;
-font-size:32px;
-margin:auto;
-margin-bottom:15px;
+align-items:center;
+font-size:30px;
 }
 
 .statusCard h3{
 font-size:22px;
 margin-bottom:8px;
-color:#111;
 }
 
 .statusCard p{
 font-size:14px;
+color:#666;
 line-height:24px;
+}
+/*==================================================
+AINEX JPW PRO v4
+style.css
+PART 3
+==================================================*/
+
+/* Feature Grid */
+
+.featureGrid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin-bottom:20px;
+}
+
+.feature{
+height:90px;
+background:#fff;
+border-radius:18px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+font-size:22px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.30s;
+cursor:pointer;
+}
+
+.feature:hover{
+transform:translateY(-4px);
+}
+
+.feature p{
+margin-top:7px;
+font-size:12px;
+font-weight:600;
+color:#555;
+}
+
+/* Form */
+
+.formCard{
+background:#fff;
+padding:22px;
+border-radius:24px;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+margin-bottom:20px;
+}
+
+.formCard h2{
+font-size:22px;
+font-weight:700;
+margin-bottom:18px;
+color:#111;
+}
+
+.inputBox{
+margin-bottom:18px;
+}
+
+.inputBox label{
+display:block;
+margin-bottom:8px;
+font-size:14px;
+font-weight:600;
+color:#333;
+}
+
+.inputBox input{
+width:100%;
+height:56px;
+padding:0 18px;
+border:2px solid #e7edfb;
+border-radius:16px;
+font-size:16px;
+outline:none;
+transition:.30s;
+}
+
+.inputBox input:focus{
+border-color:#0058ff;
+box-shadow:0 0 0 4px rgba(0,88,255,.08);
+}
+
+.inputBox input:disabled{
+background:#f6f8fd;
+color:#999;
+}
+
+.inputBox input[readonly]{
+background:#f6f8fd;
+}
+
+#submitBtn{
+width:100%;
+height:58px;
+border:none;
+border-radius:18px;
+background:linear-gradient(135deg,#16a34a,#22c55e);
+color:#fff;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+transition:.30s;
+box-shadow:0 12px 28px rgba(22,163,74,.25);
+}
+
+#submitBtn:hover{
+transform:translateY(-3px);
+}
+
+#submitBtn:disabled{
+background:#bcc5d3;
+box-shadow:none;
+cursor:not-allowed;
+}
+
+/* Info */
+
+.infoCard{
+background:#fff;
+padding:22px;
+border-radius:24px;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+margin-bottom:20px;
+}
+
+.infoRow{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 0;
+border-bottom:1px solid #eef2fb;
+}
+
+.infoRow:last-child{
+border-bottom:none;
+}
+
+.infoRow span{
+font-size:14px;
 color:#666;
 }
-/*==========================
-FEATURES
-==========================*/
 
-.featureWrap {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin-bottom: 20px;
+.infoRow b{
+font-size:15px;
+font-weight:700;
+color:#111;
 }
 
-.feature {
-  background: #fff;
-  height: 90px;
-  border-radius: 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
-  transition: .30s;
-  cursor: pointer;
+/* WhatsApp */
+
+.supportBtn{
+width:100%;
+height:58px;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#25D366;
+border-radius:18px;
+text-decoration:none;
+color:#fff;
+font-size:17px;
+font-weight:700;
+box-shadow:0 12px 28px rgba(37,211,102,.25);
+transition:.30s;
+margin-bottom:20px;
 }
 
-.feature:hover {
-  transform: translateY(-5px);
+.supportBtn:hover{
+transform:translateY(-3px);
 }
 
-.feature:active {
-  transform: scale(.97);
+/* Footer */
+
+footer{
+padding:15px 10px 45px;
+text-align:center;
 }
 
-.feature {
-  font-size: 22px;
+footer h2{
+font-size:24px;
+font-weight:700;
+color:#0058ff;
 }
 
-.feature p {
-  margin-top: 8px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #555;
+footer p{
+margin-top:8px;
+font-size:13px;
+color:#666;
 }
 
-/*==========================
-FORM
-==========================*/
+/* Success */
 
-.formCard {
-  background: #fff;
-  padding: 24px;
-  border-radius: 24px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
-  margin-bottom: 20px;
+.success{
+background:linear-gradient(135deg,#16a34a,#22c55e)!important;
+color:#fff!important;
 }
 
-.formCard h2 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 18px;
-  color: #111;
+.successCard{
+background:#ecfff2!important;
+border:2px solid #16a34a;
 }
 
-.inputGroup {
-  margin-bottom: 18px;
+.successIcon{
+background:#16a34a!important;
+color:#fff!important;
 }
 
-.inputGroup label {
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #333;
+/* Scroll */
+
+::-webkit-scrollbar{
+width:6px;
 }
 
-.inputGroup input {
-  width: 100%;
-  height: 56px;
-  padding: 0 18px;
-  border: 2px solid #e5ebfb;
-  border-radius: 16px;
-  outline: none;
-  font-size: 16px;
-  background: #fff;
-  transition: .30s;
+::-webkit-scrollbar-thumb{
+background:#0058ff;
+border-radius:20px;
 }
 
-.inputGroup input:focus {
-  border-color: #0058ff;
-  box-shadow: 0 0 0 4px rgba(0, 88, 255, .08);
+/* Mobile */
+
+@media(max-width:480px){
+
+.container{
+padding:14px;
 }
 
-.inputGroup input:disabled {
-  background: #f5f8fd;
-  color: #999;
+.logo{
+width:52px;
+height:52px;
+font-size:24px;
 }
 
-.inputGroup input[readonly] {
-  background: #f5f8fd;
+.brand h1{
+font-size:18px;
 }
 
-/*==========================
-SUBMIT BUTTON
-==========================*/
-
-#submitBtn {
-  width: 100%;
-  height: 58px;
-  border: none;
-  border-radius: 18px;
-  background: linear-gradient(135deg, #18a34a, #11c55b);
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: .30s;
-  box-shadow: 0 15px 30px rgba(24, 163, 74, .25);
+.brand p{
+font-size:12px;
 }
 
-#submitBtn:hover {
-  transform: translateY(-3px);
+.heroCard{
+padding:24px 18px;
 }
 
-#submitBtn:active {
-  transform: scale(.98);
+.heroCard h2{
+font-size:24px;
 }
 
-#submitBtn:disabled {
-  background: #bfc7d3;
-  box-shadow: none;
-  cursor: not-allowed;
+.price{
+font-size:46px;
 }
 
-/*==========================
-INFO CARD
-==========================*/
-
-.infoCard {
-  background: #fff;
-  padding: 22px;
-  border-radius: 24px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
-  margin-bottom: 20px;
+.line{
+width:28px;
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid #edf2fb;
+.feature{
+height:80px;
+font-size:19px;
 }
 
-.row:last-child {
-  border-bottom: none;
+.feature p{
+font-size:10px;
 }
 
-.row span {
-  font-size: 14px;
-  color: #666;
+.formCard{
+padding:18px;
 }
 
-.row b {
-  font-size: 15px;
-  font-weight: 700;
-  color: #111;
+.infoCard{
+padding:18px;
 }
 
-/*==========================
-SUPPORT BUTTON
-==========================*/
-
-.supportBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 58px;
-  background: #25D366;
-  border-radius: 18px;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 700;
-  color: #fff;
-  box-shadow: 0 12px 30px rgba(37, 211, 102, .28);
-  transition: .30s;
-  margin-bottom: 22px;
+.statusCard{
+padding:20px;
 }
 
-.supportBtn:hover {
-  transform: translateY(-3px);
+#payBtn,
+#submitBtn,
+.supportBtn{
+height:54px;
+font-size:16px;
 }
 
-.supportBtn:active {
-  transform: scale(.98);
-}
-/*==========================
-FOOTER
-==========================*/
-
-footer {
-  padding: 20px 10px 45px;
-  text-align: center;
+.inputBox input{
+height:52px;
+font-size:15px;
 }
 
-footer h2 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #0058ff;
-  margin-bottom: 8px;
+.topBar{
+height:36px;
 }
 
-footer p {
-  font-size: 13px;
-  color: #666;
-  line-height: 22px;
+.marquee span{
+font-size:12px;
 }
 
-/*==========================
-PAYMENT SUCCESS
-==========================*/
-
-.success {
-  background: linear-gradient(135deg, #16a34a, #22c55e) !important;
-  color: #fff !important;
 }
-
-.successCard {
-  background: #ebfff2 !important;
-  border: 2px solid #16a34a;
-}
-
-.successIcon {
-  background: #16a34a !important;
-  color: #fff !important;
-  animation: pop .5s ease;
-}
-
-@keyframes pop {
-  
-  0% {
-    transform: scale(.5);
-    opacity: 0;
-  }
-  
-  70% {
-    transform: scale(1.1);
-  }
-  
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  
-}
-
-/*==========================
-INPUT ANIMATION
-==========================*/
-
-.inputGroup input {
-  transition: .30s;
-}
-
-.inputGroup input:hover {
-  border-color: #90b7ff;
-}
-
-/*==========================
-CARD HOVER
-==========================*/
-
-.heroCard,
-.statusCard,
-.formCard,
-.infoCard,
-.feature {
-  
-  transition: .30s;
-  
-}
-
-.heroCard:hover,
-.statusCard:hover,
-.formCard:hover,
-.infoCard:hover {
-  
-  transform: translateY(-3px);
-  
-}
-
-/*==========================
-BUTTON EFFECT
-==========================*/
-
-button,
-.supportBtn {
-  
-  transition: .30s;
-  
-}
-
-button:active,
-.supportBtn:active {
-  
-  transform: scale(.97);
-  
-}
-
-/*==========================
-SCROLLBAR
-==========================*/
-
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #0058ff;
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-track {
-  background: #edf5ff;
-}
-
-/*==========================
-RESPONSIVE
-==========================*/
-
-@media(max-width:480px) {
-  
-  .wrapper {
-    padding: 14px;
-  }
-  
-  .logo {
-    width: 52px;
-    height: 52px;
-    font-size: 24px;
-  }
-  
-  .brand h1 {
-    font-size: 18px;
-  }
-  
-  .brand p {
-    font-size: 12px;
-  }
-  
-  .heroCard {
-    padding: 24px 18px;
-  }
-  
-  .heroCard h2 {
-    font-size: 24px;
-  }
-  
-  .priceBox {
-    font-size: 48px;
-  }
-  
-  .stepLine {
-    width: 28px;
-  }
-  
-  .featureWrap {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-  }
-  
-  .feature {
-    height: 78px;
-    font-size: 19px;
-  }
-  
-  .feature p {
-    font-size: 10px;
-    margin-top: 5px;
-  }
-  
-  .formCard {
-    padding: 18px;
-  }
-  
-  .statusCard {
-    padding: 20px;
-  }
-  
-  .infoCard {
-    padding: 18px;
-  }
-  
-  #payBtn,
-  #submitBtn,
-  .supportBtn {
-    height: 54px;
-    font-size: 16px;
-  }
-  
-  .inputGroup input {
-    height: 52px;
-    font-size: 15px;
-  }
-  
-  .topSlider {
-    height: 36px;
-  }
-  
-  .marquee span {
-    font-size: 12px;
-  }
-  
-}
-
-/*==========================
-END
-==========================*/
