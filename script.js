@@ -3,42 +3,40 @@ AINEX JPW PRO v4
 script.js
 ========================================*/
 
-const payBtn=document.getElementById("payBtn");
-const submitBtn=document.getElementById("submitBtn");
+const payBtn = document.getElementById("payBtn");
+const submitBtn = document.getElementById("submitBtn");
 
-const jpwid=document.getElementById("jpwid");
-const password=document.getElementById("password");
-const paymentid=document.getElementById("paymentid");
+const jpwid = document.getElementById("jpwid");
+const password = document.getElementById("password");
+const paymentid = document.getElementById("paymentid");
 
-const statusCard=document.getElementById("statusCard");
-const paymentStatus=document.getElementById("paymentStatus");
+const statusCard = document.getElementById("statusCard");
+const paymentStatus = document.getElementById("paymentStatus");
 
-const steps=document.querySelectorAll(".step");
+const steps = document.querySelectorAll(".step");
 
-let paymentVerified=false;
+let paymentVerified = false;
 
-/*-------------------------------
-PAY BUTTON
---------------------------------*/
+/*========================================
+CREATE ORDER
+========================================*/
 
-payBtn.addEventListener("click",createOrder);
+payBtn.addEventListener("click", createOrder);
 
 async function createOrder(){
 
-payBtn.disabled=true;
+payBtn.disabled = true;
 
-payBtn.innerHTML="⏳ Creating Order...";
+payBtn.innerHTML = "⏳ Creating Order...";
 
 try{
 
-const response=await fetch("/api/create-order",{
+const response = await fetch("/api/create-order",{
 
 method:"POST",
 
 headers:{
-
 "Content-Type":"application/json"
-
 },
 
 body:JSON.stringify({
@@ -49,7 +47,13 @@ amount:1500
 
 });
 
-const order=await response.json();
+if(!response.ok){
+
+throw new Error();
+
+}
+
+const order = await response.json();
 
 if(!order.id){
 
@@ -59,9 +63,11 @@ throw new Error();
 
 openPayment(order);
 
-}catch{
+}catch(err){
 
-alert("Unable To Create Order");
+console.error(err);
+
+alert("Unable To Create Payment Order");
 
 payBtn.disabled=false;
 
@@ -71,9 +77,9 @@ payBtn.innerHTML="💳 Pay ₹15";
 
 }
 
-/*-------------------------------
+/*========================================
 OPEN RAZORPAY
---------------------------------*/
+========================================*/
 
 function openPayment(order){
 
@@ -83,18 +89,16 @@ key:window.RAZORPAY_KEY,
 
 amount:order.amount,
 
-currency:"INR",
+currency:order.currency,
 
 name:"AINEX SERVICES",
 
-description:"JPW Reach",
+description:"JPW Reach Service",
 
 order_id:order.id,
 
 theme:{
-
 color:"#0058ff"
-
 },
 
 handler:function(response){
@@ -117,31 +121,39 @@ payBtn.innerHTML="💳 Pay ₹15";
 
 };
 
-new Razorpay(options).open();
+const rzp=new Razorpay(options);
+
+rzp.open();
 
 }
 
-/*-------------------------------
+/*========================================
 VERIFY PAYMENT
---------------------------------*/
+========================================*/
 
 async function verifyPayment(payment){
 
 payBtn.innerHTML="🔄 Verifying...";
+
+try{
 
 const verify=await fetch("/api/verify-payment",{
 
 method:"POST",
 
 headers:{
-
 "Content-Type":"application/json"
-
 },
 
 body:JSON.stringify(payment)
 
 });
+
+if(!verify.ok){
+
+throw new Error();
+
+}
 
 const result=await verify.json();
 
@@ -153,7 +165,19 @@ unlockForm(result.payment_id);
 
 }else{
 
-alert("Verification Failed");
+alert(result.message || "Payment Verification Failed");
+
+payBtn.disabled=false;
+
+payBtn.innerHTML="💳 Pay ₹15";
+
+}
+
+}catch(err){
+
+console.error(err);
+
+alert("Server Error");
 
 payBtn.disabled=false;
 
@@ -163,9 +187,9 @@ payBtn.innerHTML="💳 Pay ₹15";
 
 }
 
-/*-------------------------------
+/*========================================
 UNLOCK FORM
---------------------------------*/
+========================================*/
 
 function unlockForm(pid){
 
@@ -204,7 +228,6 @@ Your payment has been verified successfully.
 `;
 
 steps[0].classList.add("active");
-
 steps[1].classList.add("active");
 
 payBtn.classList.add("success");
@@ -213,9 +236,9 @@ payBtn.innerHTML="✅ Payment Successful";
 
 }
 
-/*-------------------------------
+/*========================================
 SUBMIT
---------------------------------*/
+========================================*/
 
 submitBtn.addEventListener("click",submitForm);
 
@@ -263,9 +286,7 @@ Password : ${password.value}`;
 
 window.open(
 
-"https://wa.me/919236414171?text="+
-
-encodeURIComponent(msg),
+"https://wa.me/919236414171?text="+encodeURIComponent(msg),
 
 "_blank"
 
@@ -273,9 +294,9 @@ encodeURIComponent(msg),
 
 }
 
-/*-------------------------------
+/*========================================
 NETWORK
---------------------------------*/
+========================================*/
 
 window.addEventListener("offline",()=>{
 
@@ -285,6 +306,6 @@ alert("No Internet Connection");
 
 window.addEventListener("online",()=>{
 
-console.log("Connected");
+console.log("Internet Connected");
 
 });
